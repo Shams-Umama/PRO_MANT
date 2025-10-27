@@ -1,1 +1,2 @@
-web: gunicorn PRO_MANT.wsgi
+web: gunicorn PRO_MANT.wsgi:application
+
