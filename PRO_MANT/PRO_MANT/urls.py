@@ -6,11 +6,11 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('core.urls')),
-    path('', include('account.urls')),
-    path('projects/', include('project.urls')),
-    path('projects/<uuid:project_id>/', include('todolist.urls')),
-    path('projects/<uuid:project_id>/<uuid:todolist_id>/', include('ta_sk.urls')),
+    path('', include('core.urls')),               # for homepage, about, etc.
+    path('account/', include('account.urls')),    # for login/signup
+    path('projects/', include('project.urls')),   # for projects
+    path('projects/<uuid:project_id>/', include('todolist.urls')),  # todolist
+    path('projects/<uuid:project_id>/<uuid:todolist_id>/', include('ta_sk.urls')),  # tasks
 ]
 
 # ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
